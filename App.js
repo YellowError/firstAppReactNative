@@ -44,11 +44,11 @@ export default function App() {
       <View style={styles.container}>
         <Image source={selectedImage.localUri} style={styles.thumbnail}/>
         {/* <Image source={{uri: "http://i.imgur.com/TkIrScD.png"}} style={{width: 305, height: 159}}/> */}
-        <Text style={styles.instructions}>Hello World !</Text>
+        <Text style={styles.instructions}>Do you want share this photo ?</Text>
         <TouchableOpacity
         onPress={openShareDialogAsync}
         style={styles.button}>
-          <Text style={styles.buttonText}>Share this photo !</Text>
+          <Text style={styles.buttonText}>Share</Text>
         </TouchableOpacity>
       </View>
     );
@@ -78,7 +78,8 @@ const styles = StyleSheet.create({
     color: "#888",
     fontSize: 18,
     textTransform:"uppercase",
-    marginHorizontal: 15
+    marginHorizontal: 15,
+    marginBottom: 10
   },
   logo:{
     width: 305,
@@ -93,7 +94,8 @@ const styles = StyleSheet.create({
   },
   buttonText:{
     fontSize: 20,
-    color:"#fff"
+    color:"#fff",
+    textTransform: "uppercase"
   },
   thumbnail:{
     width:300,
